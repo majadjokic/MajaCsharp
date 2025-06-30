@@ -1,7 +1,7 @@
 ﻿namespace MajaCsharp.Models
 {
     
-        public class EmployeeEntity
+        public class EmployeeModel
         {
             public string EmployeeName { get; set; } = default!;
             public DateTime StarTimeUtc { get; set; }

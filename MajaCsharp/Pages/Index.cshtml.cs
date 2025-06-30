@@ -35,9 +35,9 @@ namespace MajaCsharp.Pages
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
-                var employeesEntities = JsonSerializer.Deserialize<List<EmployeeEntity>>(json) ?? new();
+                var employeesM = JsonSerializer.Deserialize<List<EmployeeModel>>(json) ?? new();
 
-                Employees = employeesEntities
+                Employees = employeesM
                     .GroupBy(e => e.EmployeeName)
                     .Select(g => 
                     new EmployeeSummary
